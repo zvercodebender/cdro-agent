@@ -1,0 +1,16 @@
+name: CDRO-Agent
+on:
+  push:
+    branches:
+      - master
+jobs:
+  demo-hello-python-version:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "my CDRO Agent is at version ${{ steps.tagkit.outputs.tag }}"
+      - uses: actions/checkout@v2
+      - name: build
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USER }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+        run: ./build.sh
