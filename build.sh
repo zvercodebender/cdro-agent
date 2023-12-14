@@ -1,4 +1,4 @@
-TAG="2023.08.0.167214_3.2.51_20230809"
+TAG="2023.10.0.169425_3.2.54_20231002"
 
 CONTAINER="cbflow-agent"
 docker build  -t rbroker/${CONTAINER}:${TAG} --build-arg TAG="${TAG}" .
