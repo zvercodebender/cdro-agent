@@ -32,5 +32,5 @@ jobs:
           dockerfile: Dockerfile
           context: .
           destination: rbroker/cbflow-agent:${{vars.CDRO_TAG}},rbroker/cbflow-agent:latest
-          build-args: BUILDKIT_CONTEXT_KEEP_GIT_DIR=1,BUILDKIT_INLINE_CACHE=1,TAG,${{vars.CDRO_TAG}}
+          build-args: BUILDKIT_CONTEXT_KEEP_GIT_DIR=1,BUILDKIT_INLINE_CACHE=1,TAG="${{vars.CDRO_TAG}}"
 
