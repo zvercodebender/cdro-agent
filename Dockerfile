@@ -4,10 +4,10 @@ FROM cloudbees/cbflow-agent:${TAG}
 
 USER root
 
-RUN mkdir /opt/cbflow/grape && \
+RUN mkdir -p /opt/cbflow/grape && \
     chown cbflow:cbflow /opt/cbflow/grape
 
-RUN mkdir /home/cbflow \
+RUN mkdir -p /home/cbflow \
 &&  chown cbflow:cbflow /home/cbflow \
 &&  sed -i "s/\/tmp/\/home\/cbflow/g" /etc/passwd
 
