@@ -2,7 +2,7 @@ name: CDRO-Agent
 on:
   push:
     branches:
-      - main
+      - gha
 jobs:
   demo-hello-python-version:
     runs-on: ubuntu-latest
