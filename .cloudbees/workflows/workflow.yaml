@@ -17,6 +17,7 @@ jobs:
         shell: sh
         run: |
           echo "Working on tag ${{vars.CDRO_TAG}}"
+          pwd
           ls -Fla ./
 
       - id: dockerconfig
