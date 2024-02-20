@@ -17,7 +17,7 @@ jobs:
         shell: sh
         run: |
           echo "Working on tag ${{vars.CDRO_TAG}}"
-          find -d 3 -L /workspace
+          find -L /workspace -d 3 
 
       - id: dockerconfig
         name: Configure container registry credentials
